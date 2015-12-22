@@ -19,7 +19,11 @@ $ sort-bed regions.unsorted.bed > regions.bed```
 
 The result is 2,448 proposed enhancer regions in intergenic space.
 
-Preliminary analysis: Generate heatmaps and metagene plots to test for enrichment and de-enrichment
+Preliminary analysis: Generate heatmaps and metagene plots to test for enrichment and de-enrichment. Done using deeptools for visualization.
 
 `computeMatrix reference-point --regionsFileName /Users/Carlos/Desktop/Projects/Enhancer_Project/enhancers.intergenic.bed --scoreFileName /Users/Carlos/Dropbox/ChIP-Seq/hg19/old_data/Sample_H3K1/Tracks/H3K1.normalized.bigWig --referencePoint center --beforeRegionStartLength 1000 --afterRegionStartLength 1000 --numberOfProcessors "max" --outFileName computematrix.h3k1.refpoint --outFileSortedRegions sortedregions.h3k1.refpoint.bed`
 
+Generate heatmap + metagene
+
+H3K1
+`heatmapper --matrixFile /Users/Carlos/Desktop/Projects/Enhancer_Project/computematrix.h3k1.refpoint --outFileName heatmapper.h3k1.refpoint.pdf --colorMap hot --heatmapHeight 15 --refPointLabel "Enhancer Center" --regionsLabel "Enhancers" --plotTitle "H3K1 Signal at Enhancers"`
