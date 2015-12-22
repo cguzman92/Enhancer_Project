@@ -26,4 +26,5 @@ Preliminary analysis: Generate heatmaps and metagene plots to test for enrichmen
 Generate heatmap + metagene
 
 H3K1
+
 `heatmapper --matrixFile /Users/Carlos/Desktop/Projects/Enhancer_Project/computematrix.h3k1.refpoint --outFileName heatmapper.h3k1.refpoint.pdf --colorMap hot --heatmapHeight 15 --refPointLabel "Enhancer Center" --regionsLabel "Enhancers" --plotTitle "H3K1 Signal at Enhancers"`
