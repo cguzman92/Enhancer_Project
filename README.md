@@ -17,3 +17,9 @@ $ sort-bed regions.unsorted.bed > regions.bed```
 
 ```$ bedops --range 5000 --merge TSS.bed | bedops --not-element-of 1 regions.bed - > regions.intergenic.bed```
 
+The result is 2,448 proposed enhancer regions in intergenic space.
+
+Preliminary analysis: Generate heatmaps and metagene plots to test for enrichment and de-enrichment
+
+```computeMatrix reference-point --regionsFileName /Users/Carlos/Desktop/Projects/Enhancer_Project/enhancers.intergenic.bed --scoreFileName /Users/Carlos/Dropbox/ChIP-Seq/hg19/old_data/Sample_H3K1/Tracks/H3K1.normalized.bigWig --referencePoint center --beforeRegionStartLength 1000 --afterRegionStartLength 1000 --numberOfProcessors "max" --outFileName computematrix.h3k1.refpoint --outFileSortedRegions sortedregions.h3k1.refpoint.bed```
+
